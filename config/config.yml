@@ -110,7 +110,7 @@ default: &default_settings
 
   smtp_email_address: "smtp.gmail.com"
   smtp_email_port: 587
-  smtp_email_user_name: "creatorsclubhouse@gmail.com"
+  smtp_email_user_name: "creatorsclubhouse"
   smtp_email_password: "r00byrox"
   smtp_email_domain: "smtp.gmail.com"
 
