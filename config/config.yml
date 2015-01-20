@@ -112,7 +112,7 @@ default: &default_settings
   smtp_email_port: 587
   smtp_email_user_name: "rob@creatorsclubhouse.com"
   smtp_email_password: "r00byrox"
-  smtp_email_domain: "localhost"
+  smtp_email_domain: "smtp.sendgrid.net"
 
   # postmark_api_key:
 
