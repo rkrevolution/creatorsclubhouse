@@ -117,7 +117,7 @@ default: &default_settings
   # postmark_api_key:
 
   # This will be the from field in the mails sent from Sharetribe
-  sharetribe_mail_from_address: "creatorsclubhouse@gmail.com"
+  sharetribe_mail_from_address: "rob@creatorsclubhouse.com"
 
   # The address where the notifications of feedbacks from Sharetribe UI are sent
   feedback_mailer_recipients:  'admins@example.com'
