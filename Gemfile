@@ -19,6 +19,7 @@ gem 'sass-rails'
 gem 'compass-rails'
 
 gem 'jquery-rails', '2.1.4'
+gem 'jquery-migrate-rails'
 
 # Bundle the extra gems:
 
