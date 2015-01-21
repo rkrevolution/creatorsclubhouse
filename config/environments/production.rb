@@ -1,6 +1,6 @@
 Kassi::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
-
+  config.assets.precompile += %w( mercury.js mercury.css mercury_overrides.css )
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests
   # If live updates for translations are in use, caching is set to false.
