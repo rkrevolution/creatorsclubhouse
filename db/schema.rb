@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150107155205) do
+ActiveRecord::Schema.define(:version => 20150121184447) do
 
   create_table "auth_tokens", :force => true do |t|
     t.string   "token"
@@ -592,6 +592,11 @@ ActiveRecord::Schema.define(:version => 20150107155205) do
     t.string   "checkout_password"
     t.datetime "created_at",                           :null => false
     t.datetime "updated_at",                           :null => false
+    t.string   "merchant_id"
+    t.string   "master_merchant_id"
+    t.string   "public_key"
+    t.string   "private_key"
+    t.string   "client_side_encryption_key"
   end
 
   create_table "payment_rows", :force => true do |t|
