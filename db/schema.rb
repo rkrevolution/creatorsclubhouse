@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150121184447) do
+ActiveRecord::Schema.define(:version => 20150123211847) do
 
   create_table "auth_tokens", :force => true do |t|
     t.string   "token"
@@ -44,8 +44,8 @@ ActiveRecord::Schema.define(:version => 20150121184447) do
   end
 
   create_table "braintree_accounts", :force => true do |t|
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
     t.string   "first_name"
     t.string   "last_name"
     t.string   "person_id"
@@ -60,6 +60,11 @@ ActiveRecord::Schema.define(:version => 20150121184447) do
     t.string   "hidden_account_number"
     t.string   "status"
     t.integer  "community_id"
+    t.string   "merchant_id"
+    t.string   "master_merchant_id"
+    t.string   "public_key"
+    t.string   "private_key"
+    t.string   "client_side_encryption_key"
   end
 
   create_table "categories", :force => true do |t|

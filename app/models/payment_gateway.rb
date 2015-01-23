@@ -16,6 +16,11 @@
 #  checkout_password                    :string(255)
 #  created_at                           :datetime         not null
 #  updated_at                           :datetime         not null
+#  merchant_id                          :string(255)
+#  master_merchant_id                   :string(255)
+#  public_key                           :string(255)
+#  private_key                          :string(255)
+#  client_side_encryption_key           :string(255)
 #
 
 class PaymentGateway < ActiveRecord::Base
