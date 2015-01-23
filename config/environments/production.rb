@@ -12,6 +12,9 @@ Kassi::Application.configure do
 
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
+  
+  # Precompile additional assets
+  config.assets.precompile += %w(mercury.js mercury.css mercury_overrides.css mercury_overrides.js)
 
   # Set how to handle deprecation warnings
   config.active_support.deprecation = :notify
