@@ -370,6 +370,7 @@ GEM
     rest-client (1.6.7)
       mime-types (>= 1.16)
     riddle (1.5.11)
+    rmagick (2.13.2)
     rspec (2.99.0)
       rspec-core (~> 2.99.0)
       rspec-expectations (~> 2.99.0)
@@ -548,6 +549,7 @@ DEPENDENCIES
   rb-fsevent
   recaptcha
   rest-client (>= 1.6.0)
+  rmagick (= 2.13.2)
   rspec-rails (~> 2.99.0)
   rubocop
   ruby-prof
