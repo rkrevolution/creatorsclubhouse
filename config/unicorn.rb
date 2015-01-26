@@ -1,4 +1,4 @@
-worker_processes Integer(ENV["WEB_CONCURRENCY"] || 2)
+worker_processes Integer(ENV["WEB_CONCURRENCY"] || 3)
 timeout 20 # seconds, keep this lower than 30 if deployed to heroku
 preload_app true
 
