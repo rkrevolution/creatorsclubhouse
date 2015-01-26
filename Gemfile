@@ -27,7 +27,7 @@ gem 'jquery-migrate-rails'
 #gem 'thin'
 gem 'rack-timeout'
 gem 'unicorn', "~>4.6.3"
-
+gem 'rmagick', '2.13.2'
 gem "mysql2"
 gem 'haml'
 gem 'sass', "  ~> 3.2.9"
