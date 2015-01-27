@@ -3,9 +3,6 @@
 #/ Setup the local environment
 #/
 
-
-set -e
-
 cd $(dirname $0)/..
 BASEDIR=$(pwd -P)
 
