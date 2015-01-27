@@ -46,3 +46,7 @@ coverage/
 .idea/
 *.sock
 .vagrant
+
+# Local dev setup
+/bin
+/vendor/gems
