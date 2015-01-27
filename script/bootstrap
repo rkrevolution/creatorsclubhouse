@@ -3,6 +3,8 @@
 #/ Setup the local environment
 #/
 
+set -e
+
 cd $(dirname $0)/..
 BASEDIR=$(pwd -P)
 
@@ -15,6 +17,8 @@ bundle check --path vendor/gems >/dev/null 2>&1 ||
     bundle install --binstubs bin --path vendor/gems --no-prune
 
 # verify dependencies
+set +e
+
 /bin/echo -n "Verifying mysql...         "
 which mysql 2>/dev/null 1>&2 && echo "OK" || {
   echo "MISSING"
@@ -33,4 +37,4 @@ which identify 2>/dev/null 1>&2 && echo "OK" || {
   exit 1
 }
 
-
+set -e
