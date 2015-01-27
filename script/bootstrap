@@ -22,18 +22,24 @@ set +e
 /bin/echo -n "Verifying mysql...         "
 which mysql 2>/dev/null 1>&2 && echo "OK" || {
   echo "MISSING"
+  echo
+  echo "brew install mysql"
   exit 1
 }
 
 /bin/echo -n "Verifying sphinx...        "
 which searchd 2>/dev/null 1>&2 && echo "OK" || {
   echo "MISSING"
+  echo
+  echo "brew install sphinx --mysql"
   exit 1
 }
 
 /bin/echo -n "Verifying ImageMagick...   "
 which identify 2>/dev/null 1>&2 && echo "OK" || {
   echo "MISSING"
+  echo
+  echo "brew install imagemagick"
   exit 1
 }
 
