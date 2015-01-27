@@ -1,10 +1,6 @@
 source 'http://rubygems.org'
 
-if ENV.any? {|e,v| e.downcase.match "heroku"}
-  ruby '2.1.2'
-else
-  raise 'Ruby version must be greater than 2.0' unless  RUBY_VERSION.to_f > 2.0
-end
+ruby ENV['CUSTOM_RUBY_VERSION'] || '2.1.2'
 
 gem 'rails', '3.2.19'
 
