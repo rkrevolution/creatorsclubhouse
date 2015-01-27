@@ -32,7 +32,7 @@ module Kassi
     config.autoload_paths += Dir[Rails.root.join('app', 'view_utils')]
     config.autoload_paths += Dir[Rails.root.join('app', 'forms')]
     # Enable the asset pipeline
-    config.assets.enabled = true
+    config.assets.enabled = false
     # Enabling digest, this is also in production.rb so if there are errors, get rid of one.
     config.assets.digest = true
 
