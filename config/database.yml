@@ -4,9 +4,12 @@ development:
     adapter: mysql2
     database: sharetribe_development
     encoding: utf8
-    username: sharetribe
-    password: e124e
+    username: <%= ENV['SHARETRIBE_MYSQL_USER'] || "sharetribe" %>
+    <% if ENV['SHARETRIBE_MYSQL_PASS'] %>
+    password: <%= ENV['SHARETRIBE_MYSQL_PASS'] || "e124e" %>
+    <% end %>
     host: localhost
+    <%= ENV['SHARETRIBE_MYSQL_SOCK'] && "socket: #{ENV['SHARETRIBE_MYSQL_SOCK']}" %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
