@@ -15,14 +15,20 @@ bundle check --path vendor/gems >/dev/null 2>&1 ||
     bundle install --binstubs bin --path vendor/gems --no-prune
 
 # verify dependencies
-/bin/echo -n "Verifying mysql...    "
+/bin/echo -n "Verifying mysql...         "
 which mysql 2>/dev/null 1>&2 && echo "OK" || {
   echo "MISSING"
   exit 1
 }
 
-/bin/echo -n "Verifying sphinx...   "
+/bin/echo -n "Verifying sphinx...        "
 which searchd 2>/dev/null 1>&2 && echo "OK" || {
+  echo "MISSING"
+  exit 1
+}
+
+/bin/echo -n "Verifying ImageMagick...   "
+which identify 2>/dev/null 1>&2 && echo "OK" || {
   echo "MISSING"
   exit 1
 }
