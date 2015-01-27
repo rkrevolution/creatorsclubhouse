@@ -1,0 +1,19 @@
+#!/bin/sh
+#/
+#/ Setup the local environment
+#/
+
+
+set -e
+
+cd $(dirname $0)/..
+BASEDIR=$(pwd -P)
+
+# we got banners
+awk '/^#\//{print substr($0,4)}' $0
+
+# rubby
+rm -rf .bundle/config
+bundle check --path vendor/gems >/dev/null 2>&1 ||
+    bundle install --binstubs bin --path vendor/gems --no-prune
+
