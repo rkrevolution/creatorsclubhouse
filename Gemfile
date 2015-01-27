@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '2.1.2'
+raise 'Ruby version must be greater than 2.0' unless  RUBY_VERSION.to_f > 2.0
 
 gem 'rails', '3.2.19'
 
