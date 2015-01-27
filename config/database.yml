@@ -5,9 +5,7 @@ development:
     database: sharetribe_development
     encoding: utf8
     username: <%= ENV['SHARETRIBE_MYSQL_USER'] || "sharetribe" %>
-    <% if ENV['SHARETRIBE_MYSQL_PASS'] %>
     password: <%= ENV['SHARETRIBE_MYSQL_PASS'] || "e124e" %>
-    <% end %>
     host: localhost
     <%= ENV['SHARETRIBE_MYSQL_SOCK'] && "socket: #{ENV['SHARETRIBE_MYSQL_SOCK']}" %>
 
