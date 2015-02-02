@@ -1,0 +1,46 @@
+#!/bin/sh
+#/
+#/ Setup the local environment
+#/
+
+set -e
+
+cd $(dirname $0)/..
+BASEDIR=$(pwd -P)
+
+# we got banners
+awk '/^#\//{print substr($0,4)}' $0
+
+# verify dependencies
+set +e
+
+/bin/echo -n "Verifying mysql...         "
+which mysql 2>/dev/null 1>&2 && echo "OK" || {
+  echo "MISSING"
+  echo
+  echo "brew install mysql"
+  exit 1
+}
+
+/bin/echo -n "Verifying sphinx...        "
+which searchd 2>/dev/null 1>&2 && echo "OK" || {
+  echo "MISSING"
+  echo
+  echo "brew install sphinx --mysql"
+  exit 1
+}
+
+/bin/echo -n "Verifying ImageMagick...   "
+which identify 2>/dev/null 1>&2 && echo "OK" || {
+  echo "MISSING"
+  echo
+  echo "brew install imagemagick"
+  exit 1
+}
+
+set -e
+
+# rubby
+rm -rf .bundle/config
+bundle check --path vendor/gems >/dev/null 2>&1 ||
+    bundle install --binstubs bin --path vendor/gems --no-prune

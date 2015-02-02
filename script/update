@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+cd $(dirname $0)/..
+BASEDIR=$(pwd -P)
+
+: ${RAILS_ENV:=development}
+
+./script/bootstrap
+
+export RAILS_ENV
+
+rake db:setup ts:index ts:restart
+
