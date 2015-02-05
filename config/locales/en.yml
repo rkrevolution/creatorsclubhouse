@@ -420,6 +420,15 @@ en:
       day: day
       days: days
       price_per_day: "Price per day: %{price}"
+      hour: hour
+      hours: hours
+      price_per_hour: "Price per hour: %{price}"
+      week: week
+      weeks: weeks
+      price_per_week: "Price per week: %{price}"
+      project: project 
+      projects: projects
+      price_per_project: "Price per project: %{price}"
     index:
       loading_more_messages: "Loading more messages"
       message_partitive: message
